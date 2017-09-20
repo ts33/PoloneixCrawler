@@ -1,0 +1,12 @@
+# python config
+.py3env/
+__pycache__/
+
+# ide config
+.idea/
+
+data/
+
+# all data files
+*.csv
+*.zip
