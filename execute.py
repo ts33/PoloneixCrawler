@@ -1,5 +1,6 @@
 import time
-from crawler import PoloneixCrawler, PoloneixDataMunger
+from lib.crawler import PoloneixCrawler
+from lib.munger import PoloneixDataMunger
 
 ETH_START = 1441065600 # SEPT 1, 2015
 END = int(time.time())
@@ -17,8 +18,8 @@ INTERVAL_TYPES = {
     '5 Minutes': 300
 }
 
-file_dir = "/home/timothy/Projects/PoloneixCrawler/data/"
-base_dir = "/home/timothy/Projects/PoloneixCrawler/"
+file_dir = "data/"
+base_dir = "./"
 
 
 def crawl(currency_pair, interval):
@@ -34,5 +35,5 @@ def munge(currency_pair):
     munger.write_data_to_csv()
 
 # crawl(CURRENCY_PAIRS['usd_btc'], INTERVAL_TYPES['5 Minutes'])
-# munge(CURRENCY_PAIRS['usd_btc'])
-munge(CURRENCY_PAIRS['usd_eth'])
+munge(CURRENCY_PAIRS['usd_btc'])
+# munge(CURRENCY_PAIRS['usd_eth'])
